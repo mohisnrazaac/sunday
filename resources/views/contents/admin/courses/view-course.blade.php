@@ -36,9 +36,16 @@
         <div class="col-9 ps-0">
             <div class="course_content px-4 py-3">
                 <h2 class=" crs-title text-uppercase">Scada security</h2>
+                <a data-bs-toggle="modal" data-bs-target="#editCourseTitle" href="#" class="btn btn-sm btn-success edit-btn" style="position: absolute; top: 5px; right: 20px;">
+                    <i style="color: white" class="fas fa-edit"></i> Edit
+                </a>
                 <p>Learn how to secure Supervisory Control and Data Aquisition (SCADA) Systems such as Water Systems, Nuclear Reactor, and other mission-critical infrastructure.</p>
+                <span class="me-4 c_small_text"><i class=" fa fa-list color_default me-1"></i> Category: Programming</span>
+                <span class="me-4 c_small_text"><i class=" fa-solid fa-layer-group color_default me-1"></i> Level: Intermediate</span>
+                <span class="me-4 c_small_text"><i class=" fa-solid fa-volume-up color_default me-1"></i> Audio: English</span>
                 <span class="me-4 c_small_text"><i class="fa-regular fa-comment color_default me-1"></i> English</span>
-                <span class="c_small_text"><i class="fa-regular fa-closed-captioning color_default me-1"></i> English, Dutch 12 more</span>
+                <span class="me-4 c_small_text"><i class="fa-regular fa-closed-captioning color_default me-1"></i> English, Dutch 12 more</span>
+                <span class="c_small_text"><i class=" fa fa-gears color_default me-1"></i> Version: 1.0</span>
             </div>
         </div>
     </div>
@@ -54,9 +61,9 @@
             <input type="radio" class="btn-check course-input-btn" name="question-outlined" id="course-reviews" autocomplete="off">
             <label class="btn course-nav-btn" for="course-reviews">Reviews</label>
 
-            <a href="{{ route('courses.detail') }}">
+            <!-- <a href="{{ route('courses.detail') }}">
                 <button type="button" class="cirr-btn" data-toggle="modal" data-target="#sectionModal" style="float: right;">Start Course</button>
-            </a>
+            </a> -->
             
             <div id="courseDetailSection" class="row mt-3 course-outer-card">
                 
@@ -77,10 +84,117 @@
 
     </div>
 </div>
- 
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="editCourseTitle" tabindex="-1" aria-labelledby="editCourseTitleLabel" aria-hidden="true" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editCourseTitleLabel">Edit SCADA Security</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Modal content (form or any details to edit) -->
+        <form>
+            <div class="row">
+                <div class="mb-3 col-12">
+                    <label for="courseTitle" class="form-label ms-0">Course Title</label>
+                    <input type="text" class="form-control" id="courseTitle" value="SCADA Security">
+                </div>
+            
+                <div class="mb-3 col-12">
+                    <label for="courseDescription" class="form-label ms-0">Course Description</label>
+                    <input type="text" class="form-control" id="courseDescription" value="Learn how to secure Supervisory Control and Data Acquisition (SCADA) Systems such as Water Systems, Nuclear Reactors, and other mission-critical infrastructure.">
+                </div>
+            
+                <div class="col-6 mb-3">
+                    <label for="courseCategory" class="form-label ms-0">Category</label>
+                    <select class="form-select" id="courseCategory">
+                        <option value="programming" selected>Programming</option>
+                        <option value="security">Security</option>
+                        <option value="networking">Networking</option>
+                        <option value="cloud">Cloud Computing</option>
+                    </select>
+                </div>
+
+                <div class="col-6 mb-3">
+                    <label for="courseLevel" class="form-label ms-0">Level</label>
+                    <select class="form-select" id="courseLevel">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate" selected>Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <div class="col-6 mb-3">
+                    <label for="courseAudio" class="form-label ms-0">Audio Language</label>
+                    <select class="form-select" id="courseAudio">
+                        <option value="english" selected>English</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                    </select>
+                </div>
+
+                <div class="col-6 mb-3">
+                    <label for="courseTheme" class="form-label ms-0">Theme</label>
+                    <select class="form-select" id="courseTheme">
+                        <option value="blue" selected>Blue</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="yellow">Yellow</option>
+                    </select>
+                </div>
+
+                <div class="col-6 mb-3">
+                    <label for="courseVersion" class="form-label ms-0">Version</label>
+                    <select class="form-select" id="courseVersion">
+                        <option value="1.0" selected>1.0</option>
+                        <option value="2.0">2.0</option>
+                        <option value="3.0">3.0</option>
+                    </select>
+                </div>
+            </div>
+          <!-- Add more form fields as needed -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn exit" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn save">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Bootstrap Modal -->
+
+ <!-- ACCORDIAN MODAL WINDOW -->
+ <div class="modal fade" id="editcollapseOne" tabindex="-1" aria-labelledby="editcollapseOneLabel" aria-hidden="true" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editcollapseOneLabel">Edit SCADA Security Description</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Modal content (form or any details to edit) -->
+        <form>
+          <h3 class="fs-subtitle">Course Description*</h3>
+          <!-- WYSIWYG editor placeholder -->
+          <textarea name="description" type="text" class="form-control editor" id="courseDescription" placeholder="Description">asdsdasd</textarea>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn exit" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn save">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- ACCORDIAN MODAL WINDOW -->
 
 @endsection
 <script src="{{ URL::to('vendor/jquery/jquery.min.js') }}"></script>
+
 <script>
     $(document).ready(function() {
     function updateContent() {
@@ -91,6 +205,9 @@
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button fw-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                  Requirements
+                                 <a data-bs-toggle="modal" data-bs-target="#editcollapseOne" href="#" style="position: absolute; top: 15px; right: 60px;">
+                                    <i class="fas fa-edit"></i>
+                                </a>
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#courseAccordion">
@@ -104,6 +221,7 @@
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button fw-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Description
+                                <a data-bs-toggle="modal" data-bs-target="#editcollapseOne" href="" style="position: absolute; top: 15px; right:60px;"><i class="fas fa-edit"> </i></a>
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#courseAccordion">
@@ -117,6 +235,7 @@
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button fw-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Who is this for?
+                                <a data-bs-toggle="modal" data-bs-target="#editcollapseOne" href="" style="position: absolute; top: 15px; right:60px;"><i class="fas fa-edit"> </i></a>
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#courseAccordion">
@@ -206,6 +325,7 @@
 
     // Update content on radio button change
     $('input[name="question-outlined"]').on('change', updateContent);
+    
 });
 
 
