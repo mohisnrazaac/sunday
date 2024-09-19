@@ -65,6 +65,7 @@
               </div>
           </div>
           <div class="col-9 course_detail_content_column">
+<<<<<<< HEAD
             <div class="container my-4">
               <h2>Content</h2>
               <p>{{$contentdetails[0]->title}}</p>
@@ -98,5 +99,29 @@
           </div>
       </div>
     </div>
+=======
+              <h2>Content</h2>
+              <p>{{$contentdetails[0]->title}}</p>
+              <p>{{$contentdetails[0]->description}}</p>
+              <video width="640" height="360" controls>
+                @if($contentdetails[0]->video)
+                <source src="{{ url($contentdetails[0]->video) }}" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+                @endif
+
+                @if($contentdetails[0]->fileattachment)
+  
+                <a href="{{ url($contentdetails[0]->fileattachment) }}" download="{{$contentdetails[0]->fileattachment}}">
+    Download Word Document
+</a>
+@endif
+            @if($contentdetails[0]->videoposter)  <p> <iframe class="embed-responsive-item" src="{{$contentdetails[0]->videoposter}}" allowfullscreen></iframe></p>@endif
+            @if($contentdetails[0]->externalurl)   <p><iframe class="embed-responsive-item" src="{{$contentdetails[0]->externalurl}}" allowfullscreen></iframe></p>@endif
+            @if($contentdetails[0]->youtube)  <p><iframe class="embed-responsive-item" src="{{$contentdetails[0]->youtube}}" allowfullscreen></iframe></p>@endif
+            @if($contentdetails[0]->vimeo)   <p><iframe class="embed-responsive-item" src="{{$contentdetails[0]->vimeo}}" allowfullscreen></iframe></p>@endif
+          </div>
+      </div>
+>>>>>>> main
 </div>
 @endsection

@@ -36,6 +36,7 @@
         <div class="col-9 ps-0">
             <div class="course_content px-4 py-3">
                 <h2 class=" crs-title text-uppercase">Scada security</h2>
+<<<<<<< HEAD
                 <a data-bs-toggle="modal" data-bs-target="#editCourseTitle" href="#" class="btn btn-sm btn-success edit-btn" style="position: absolute; top: 5px; right: 20px;">
                     <i style="color: white" class="fas fa-edit"></i> Edit
                 </a>
@@ -46,6 +47,11 @@
                 <span class="me-4 c_small_text"><i class="fa-regular fa-comment color_default me-1"></i> English</span>
                 <span class="me-4 c_small_text"><i class="fa-regular fa-closed-captioning color_default me-1"></i> English, Dutch 12 more</span>
                 <span class="c_small_text"><i class=" fa fa-gears color_default me-1"></i> Version: 1.0</span>
+=======
+                <p>Learn how to secure Supervisory Control and Data Aquisition (SCADA) Systems such as Water Systems, Nuclear Reactor, and other mission-critical infrastructure.</p>
+                <span class="me-4 c_small_text"><i class="fa-regular fa-comment color_default me-1"></i> English</span>
+                <span class="c_small_text"><i class="fa-regular fa-closed-captioning color_default me-1"></i> English, Dutch 12 more</span>
+>>>>>>> main
             </div>
         </div>
     </div>
@@ -61,9 +67,15 @@
             <input type="radio" class="btn-check course-input-btn" name="question-outlined" id="course-reviews" autocomplete="off">
             <label class="btn course-nav-btn" for="course-reviews">Reviews</label>
 
+<<<<<<< HEAD
             <!-- <a href="{{ route('courses.detail') }}">
                 <button type="button" class="cirr-btn" data-toggle="modal" data-target="#sectionModal" style="float: right;">Start Course</button>
             </a> -->
+=======
+            <a href="{{ route('courses.detail') }}">
+                <button type="button" class="cirr-btn" data-toggle="modal" data-target="#sectionModal" style="float: right;">Start Course</button>
+            </a>
+>>>>>>> main
             
             <div id="courseDetailSection" class="row mt-3 course-outer-card">
                 
@@ -84,6 +96,7 @@
 
     </div>
 </div>
+<<<<<<< HEAD
 
 <!-- Bootstrap Modal -->
 <div class="modal fade" id="editCourseTitle" tabindex="-1" aria-labelledby="editCourseTitleLabel" aria-hidden="true" role="dialog">
@@ -195,6 +208,12 @@
 @endsection
 <script src="{{ URL::to('vendor/jquery/jquery.min.js') }}"></script>
 
+=======
+ 
+
+@endsection
+<script src="{{ URL::to('vendor/jquery/jquery.min.js') }}"></script>
+>>>>>>> main
 <script>
     $(document).ready(function() {
     function updateContent() {
@@ -203,11 +222,16 @@
                 <div class="accordion" id="courseAccordion">
                     <div class="accordion-item my-3">
                         <h2 class="accordion-header" id="headingOne">
+<<<<<<< HEAD
                             <button class="accordion-button fw-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                  Requirements
                                  <a data-bs-toggle="modal" data-bs-target="#editcollapseOne" href="#" style="position: absolute; top: 15px; right: 60px;">
                                     <i class="fas fa-edit"></i>
                                 </a>
+=======
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                 Requirements
+>>>>>>> main
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#courseAccordion">
@@ -219,9 +243,14 @@
                     </div>
                     <div class="accordion-item my-3">
                         <h2 class="accordion-header" id="headingTwo">
+<<<<<<< HEAD
                             <button class="accordion-button fw-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Description
                                 <a data-bs-toggle="modal" data-bs-target="#editcollapseOne" href="" style="position: absolute; top: 15px; right:60px;"><i class="fas fa-edit"> </i></a>
+=======
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Description
+>>>>>>> main
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#courseAccordion">
@@ -233,9 +262,14 @@
                     </div>
                     <div class="accordion-item my-3">
                         <h2 class="accordion-header" id="headingThree">
+<<<<<<< HEAD
                             <button class="accordion-button fw-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Who is this for?
                                 <a data-bs-toggle="modal" data-bs-target="#editcollapseOne" href="" style="position: absolute; top: 15px; right:60px;"><i class="fas fa-edit"> </i></a>
+=======
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Who is this for?
+>>>>>>> main
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#courseAccordion">
@@ -253,7 +287,11 @@
 				<div class="card cursor-pointer">
 					<div class="card-body text-start row">
 						<div class="col-6">
+<<<<<<< HEAD
 							<i class="fa-regular fa-circle-play color-cyan-2"></i> <span class="color-cyan-2 fw-light">Lecture
+=======
+							<i class="fa-regular fa-circle-play color-cyan-2"></i> <span class="color-cyan-2">Lecture
+>>>>>>> main
 								Title</span>
 						</div>
 						<div class="col-3 text-center text-secondary">
@@ -267,7 +305,11 @@
 				<div class="card cursor-pointer">
 					<div class="card-body text-start row">
 						<div class="col-6">
+<<<<<<< HEAD
 							<i class="fa-solid fa-file-lines text-secondary"></i> <span class="text-secondary fw-light">A Note On Asking For Help</span>
+=======
+							<i class="fa-solid fa-file-lines text-secondary"></i> <span class="text-secondary">A Note On Asking For Help</span>
+>>>>>>> main
 						</div>
 						<div class="col-3 text-center text-secondary">
 							Preview
@@ -280,7 +322,11 @@
 				<div class="card cursor-pointer">
 					<div class="card-body text-start row">
 						<div class="col-6">
+<<<<<<< HEAD
 							<i class="fa-solid fa-file-lines text-secondary"></i> <span class="text-secondary fw-light">Introducing Our TA</span>
+=======
+							<i class="fa-solid fa-file-lines text-secondary"></i> <span class="text-secondary">Introducing Our TA</span>
+>>>>>>> main
 						</div>
 						<div class="col-3 text-center text-secondary">
 							Preview
@@ -293,7 +339,11 @@
 				<div class="card cursor-pointer">
 					<div class="card-body text-start row">
 						<div class="col-6">
+<<<<<<< HEAD
 							<i class="fa-solid fa-file-lines text-secondary"></i> <span class="text-secondary fw-light">Join The Online Community</span>
+=======
+							<i class="fa-solid fa-file-lines text-secondary"></i> <span class="text-secondary">Join The Online Community</span>
+>>>>>>> main
 						</div>
 						<div class="col-3 text-center text-secondary">
 							Preview
@@ -325,7 +375,10 @@
 
     // Update content on radio button change
     $('input[name="question-outlined"]').on('change', updateContent);
+<<<<<<< HEAD
     
+=======
+>>>>>>> main
 });
 
 

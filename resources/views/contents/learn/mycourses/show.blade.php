@@ -6,6 +6,7 @@
 <div class="  homeBorder p-4 mb-5">
     <div class="d-flex justify-content-between">
         <div class="col">
+<<<<<<< HEAD
             <button onclick="window.history.back();" class="quiz-btns btn mb-0">◀ Go Back</button>
         </div>
         <div class="col text-end">
@@ -15,11 +16,21 @@
                 <i class="fa-solid fa-gear iconColor"></i>
             </div> --}}
             <button onclick="" class="quiz-btns btn mb-0">Continue ▶</button>
+=======
+            <h1 class="h5 homeHeading"><strong>{{ $courses[0]->courseTitle ?? 'Course Not Found' }}</strong></h1>
+            <button onclick="window.history.back();" class="quiz-btns btn mb-0">◀ Go Back</button>
+        </div>
+        <div class="col text-end">
+            <i class="fa-solid fa-maximize iconColor"></i>
+            <i class="fa-regular fa-circle-question iconColor mx-1"></i>
+            <i class="fa-solid fa-gear iconColor"></i>
+>>>>>>> main
         </div>
     </div>
 
 
 
+<<<<<<< HEAD
     <div class="row mt-3">
         <div class="col-3 course_detail_content_menu">
 
@@ -31,6 +42,16 @@
             <div id="courseDetailSection" class="row mt-3 course-outer-card about-content">
                 <div class="accordion" id="courseAccordion">
                     {{-- <div class="accordion-item">
+=======
+    <div class="row">
+        <div class="col-3 course_detail_content_menu  ">
+
+
+
+            <div id="courseDetailSection" class="row mt-3 course-outer-card about-content">
+                <div class="accordion" id="courseAccordion">
+                    <div class="accordion-item">
+>>>>>>> main
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -38,7 +59,11 @@
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+<<<<<<< HEAD
                             data-bs-parent="#courseAccordion" style=""> --}}
+=======
+                            data-bs-parent="#courseAccordion" style="">
+>>>>>>> main
                             <div class="accordion-body p-0 course_detail_accordion_body">
 
 
@@ -55,9 +80,13 @@
                                     <h2 class="accordion-header" id="headingTwo">
                                         <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+<<<<<<< HEAD
                                             <i class="fa-regular fa-circle"></i>
                                             <i class="fa-regular fa-circle-check"></i> 
                                             {{ $sec->sessionTitle }}
+=======
+                                            <i class="fa-regular fa-circle"></i> {{ $sec->sessionTitle }}
+>>>>>>> main
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
@@ -78,9 +107,13 @@
                                                         <div class='card cursor-pointer col-12 '>
                                                             <div class='card-body text-start row'>
                                                                 <div class='col-12'>
+<<<<<<< HEAD
                                                                     <i class='fa-regular fa-circle'></i>
                                                                     <i class='fa-regular fa-circle-check'></i> 
                                                                     <span class='text-secondary'>$title</span>
+=======
+                                                                    <i class='fa-regular fa-circle-check'></i> <span class='text-secondary'>$title</span>
+>>>>>>> main
                                                                     <br>
                                                                     <small class='float-end ms-4 text-end text-secondary'><i class='fa-regular fa-clock'></i> $time </small>
                                                                     <small class='float-start mr-4 text-end text-secondary'><i class='fa-solid fa-video'></i> EMBED </small>
@@ -104,6 +137,11 @@
 
 
                             </div>
+<<<<<<< HEAD
+=======
+                        </div>
+                    </div>
+>>>>>>> main
                 </div>
             </div>
 
@@ -118,6 +156,7 @@
 
 
 </div>
+<<<<<<< HEAD
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
@@ -142,4 +181,6 @@
 
 
 </script>
+=======
+>>>>>>> main
 @endsection

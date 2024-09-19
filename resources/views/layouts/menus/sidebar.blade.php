@@ -223,9 +223,13 @@
                         <li class="ms-sm-5">
                             <a class="top_menu_item" href="{{ route('chat.index') }}">
                                 Chat
+<<<<<<< HEAD
                                 @if($unreadCount > 0)
                                     <span id="chat-notification-badge" class="chat-notification-badge">{{$unreadCount}}</span>
                                 @endif
+=======
+                                <span id="chat-notification-badge" class="chat-notification-badge">{{$unreadCount}}</span> <!-- Initially 0 -->
+>>>>>>> main
                             </a>
                         </li>
                     </ul>

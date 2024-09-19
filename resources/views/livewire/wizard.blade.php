@@ -26,7 +26,11 @@
                             <div class="bar"></div>
                             <div class="bar"></div>
                             <div class="bar"></div>
+<<<<<<< HEAD
                             <!-- <div class="bar"></div> -->
+=======
+                            <div class="bar"></div>
+>>>>>>> main
                         </div>
                     </div>
                 </div>
@@ -37,7 +41,11 @@
                     <li>DETAILS</li>
                     <li>CURRICULUM</li>
                     <li>MEDIA</li>
+<<<<<<< HEAD
                     <!-- <li>PUBLISH</li> -->
+=======
+                    <li>PUBLISH</li>
+>>>>>>> main
                 </ul>
                 <!-- fieldsets -->
                 <!-------------------- BASIC INFORMATION STARTS  -------------------->
@@ -290,6 +298,7 @@
 
                 <!-------------------- MEDIA STARTS  -------------------->
                 <form id="mediaForm" data-action="{{ URL::to('/savecoursemedia')}}" method="post" enctype="multipart/form-data">
+<<<<<<< HEAD
                     <fieldset class="fieldset">
                         <h2 class="fs-title">MEDIA</h2>
                         <div class="tab-pane" id="pills-media" role="tabpanel" aria-labelledby="pills-media-tab">
@@ -332,6 +341,73 @@
                         </div>
                     </fieldset>
                 </form> 
+=======
+    <fieldset class="fieldset">
+        <h2 class="fs-title">MEDIA</h2>
+        <div class="tab-pane" id="pills-media" role="tabpanel" aria-labelledby="pills-media-tab">
+            <div class="mediaUpload-border p-0">
+                <input type="radio" class="btn-check custom-inner-style" name="media-outlined"
+                    id="htmlFirst-outlined" autocomplete="off" checked>
+                <label class="btn MediaBtn" for="htmlFirst-outlined">HTML5(mp4)</label>
+
+                <input type="radio" class="btn-check custom-inner-style" name="media-outlined"
+                    id="urlFirst-outlined" autocomplete="off">
+                <label class="btn MediaBtn" for="urlFirst-outlined">External URL</label>
+
+                <input type="radio" class="btn-check custom-inner-style" name="media-outlined"
+                    id="youtubeFirst-outlined" autocomplete="off">
+                <label class="btn MediaBtn" for="youtubeFirst-outlined">Youtube</label>
+
+                <input type="radio" class="btn-check custom-inner-style" name="media-outlined"
+                    id="vimeoFirst-outlined" autocomplete="off">
+                <label class="btn MediaBtn" for="vimeoFirst-outlined">Vimeo</label>
+
+                <input type="radio" class="btn-check custom-inner-style" name="media-outlined"
+                    id="embededFirst-outlined" autocomplete="off">
+                <label class="btn MediaBtn" for="embededFirst-outlined">Embeded</label>
+            </div>
+
+            <div style="text-align: center;" id="mediaContent">
+                <!-- Content will be updated here -->
+            </div>
+
+        </div>
+        <!-- Buttons -->
+        <div class="row mt-4">
+            <div class="col text-start ms-3">
+                <input type="button" name="previous" class="previous action-button-previous"
+                    value="Previous" />
+            </div>
+            <div class="col text-end me-3">
+                <input type="button" name="next" class="next action-button" value="Next" onclick="submitMedia()" />
+            </div>
+        </div>
+    </fieldset>
+</form>
+                
+                <!-------------------- PUBLISH STARTS  -------------------->
+                <fieldset class="fieldset">
+                    <h2 class="fs-title">PUBLISH</h2>
+                    <div class="py-3 px-5 publish-div">
+                        <i class="fa-regular fa-square-check text-center submit-icon"></i>
+                        <p class="dark-small-text ">Your course is in a draft state. Students cannot view, purchase or
+                            enroll in this course. For students that are already enrolled, this course will not appear
+                            on thier student dashboard</p>
+                    </div>
+                    <!-- btns -->
+                    <div class="row mt-5" style="margin-bottom: 100px;">
+                        <div class="col text-start ms-3">
+                            <input type="button" name="previous" class="previous action-button-previous"
+                                value="Previous" />
+                        </div>
+                        <div class="col text-end me-3">
+                            <input type="submit" wire:click="submitForm" name="submit" class="submit action-button" value="Submit for Review" />
+                        </div>
+                    </div>
+
+                </fieldset>
+              
+>>>>>>> main
         </div>
     </div>
     <!-- /.MultiStep Form -->
@@ -656,7 +732,11 @@ function submitcourse()
         console.log('Appended videoAttachment:', videoAttachmentmedia.files[0]);
     }
 
+<<<<<<< HEAD
     var imagemedia = document.getElementById('imagemedia');
+=======
+    var imagemedia = document.getElementById('videopostermedia');
+>>>>>>> main
     if (imagemedia && imagemedia.files.length > 0) {
         formData.append('videoposter', imagemedia.files[0]);
         console.log('Appended videoposter:', imagemedia.files[0]);

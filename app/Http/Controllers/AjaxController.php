@@ -8,6 +8,10 @@ use App\Traits\UploadFiles;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Log;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\Auth;
+>>>>>>> main
 
 class AjaxController extends Controller
 {
@@ -175,6 +179,7 @@ class AjaxController extends Controller
     //
     function sectionsave(Request $request)
     {
+<<<<<<< HEAD
         if($request->ajax()){
 
             $values = array('title' => $request->title,
@@ -182,6 +187,29 @@ class AjaxController extends Controller
            
 
        $last_session_id = DB::table('sessions')->insertGetId($values);
+=======
+        $userId = Auth::id();
+        if($request->ajax()){
+
+            $values = array('title' => $request->title,
+                        'course_id' => $request->last_course_id,
+                    'created_by' =>$userId);
+           
+
+       $last_session_id = DB::table('sessions')->insertGetId($values);
+       if($last_session_id)
+       {
+        $valuessec1 = array(
+            'current_step' => 'section',
+            'last_step_id' => $last_session_id,
+            'updated_by' => $userId
+        );
+        
+        $affectedRows = DB::table('courses')
+                        ->where('id', $request->last_course_id) // Assuming you have a session ID to identify the record
+                        ->update($valuessec1);
+       }
+>>>>>>> main
 
        return $last_session_id;
             }
@@ -192,6 +220,10 @@ class AjaxController extends Controller
      {
         
         $courseTitle = $request->title;
+<<<<<<< HEAD
+=======
+        $userId = Auth::id();
+>>>>>>> main
 
         // Check if a course with the same title already exists
         $existingCourse = DB::table('courses')
@@ -217,7 +249,13 @@ class AjaxController extends Controller
                 'audio_lang' => $request->audio_lang,
                 'caption_lang' => $request->caption_lang,
                 'image' => 'noimage',
+<<<<<<< HEAD
                 'ver_id' => $request->ver_id
+=======
+                'ver_id' => $request->ver_id,
+                'created_by' => $userId,
+                'current_step' => 'course'
+>>>>>>> main
             );
         
             $last_course_id = DB::table('courses')->insertGetId($values);
@@ -239,6 +277,10 @@ class AjaxController extends Controller
 
      function savelecture(Request $request)
 {
+<<<<<<< HEAD
+=======
+    $userId = Auth::id();
+>>>>>>> main
     // Define the path where files will be saved
     $directory = public_path('uploads');
 
@@ -309,12 +351,33 @@ class AjaxController extends Controller
         'externalurl' => $request->externalurllec,
         'youtube' => $request->youtubeurllec,
         'vimeo' => $request->vimeourllec,
+<<<<<<< HEAD
         'embeded' => $request->embeddedurllec
+=======
+        'embeded' => $request->embeddedurllec,
+        'created_by' => $userId
+>>>>>>> main
     );
 
     // Insert the data into the database and get the ID of the last inserted record
     try {
         $last_session_id = DB::table('terms')->insertGetId($values);
+<<<<<<< HEAD
+=======
+
+        if($last_session_id)
+       {
+        $valueslec = array(
+            'current_step' => 'lecture',
+            'last_step_id' => $last_session_id,
+             'updated_by' => $userId
+        );
+        
+        $affectedRows = DB::table('courses')
+                        ->where('id', $request->last_course_id) // Assuming you have a session ID to identify the record
+                        ->update($valueslec);
+       }
+>>>>>>> main
         Log::info('Lecture saved successfully with ID: ' . $last_session_id);
 
         // Return a JSON response indicating success
@@ -323,7 +386,11 @@ class AjaxController extends Controller
             'last_lec_id' => $last_session_id,
         ]);
     } catch (\Exception $e) {
+<<<<<<< HEAD
         Log::error("Failed to save lecture: " . $e->getMessage());
+=======
+        Log::error("Failed to save lecture: ".$e->getLine(). "-" . $e->getMessage());
+>>>>>>> main
         return response()->json(['error' => 'Failed to save lecture.'], 500);
     }
 }
@@ -332,6 +399,10 @@ class AjaxController extends Controller
 
 function savecoursemedia(Request $request)
 {
+<<<<<<< HEAD
+=======
+    $userId = Auth::id();
+>>>>>>> main
     // Define the path where files will be saved
     $directory = public_path('uploads');
 
@@ -382,13 +453,33 @@ function savecoursemedia(Request $request)
         'externalurl' => $request->externalurl ? $request->externalurl : null,
         'youtube' => $request->youtubeurl ? $request->youtubeurl : null,
         'vimeo' => $request->vimeourl ? $request->vimeourl : null,
+<<<<<<< HEAD
         'embeded'  => $request->embeddedurl ? $request->embeddedurl : null
+=======
+        'embeded'  => $request->embeddedurl ? $request->embeddedurl : null,
+        'created_by' => $userId
+>>>>>>> main
     );
 
     // Insert the data into the database and get the ID of the last inserted record
     //$last_course_id = DB::table('coursemediafile')->insertGetId($values); 
     try {
         $last_course_id = DB::table('coursemediafile')->insertGetId($values); 
+<<<<<<< HEAD
+=======
+        if($last_course_id)
+        {
+         $valueslec = array(
+             'current_step' => 'completed',
+             'last_step_id' => $last_course_id,
+             'updated_by' => $userId
+         );
+         
+         $affectedRows = DB::table('courses')
+                         ->where('id', $request->last_course_id) // Assuming you have a session ID to identify the record
+                         ->update($valueslec);
+        }
+>>>>>>> main
         Log::info('Lecture saved successfully with ID: ' . $last_course_id);
 
         // Return a JSON response indicating success
@@ -403,6 +494,10 @@ function savecoursemedia(Request $request)
 }
      function savequiz(Request $request)
      {
+<<<<<<< HEAD
+=======
+        $userId = Auth::id();
+>>>>>>> main
         if($request->ajax())
         {
             $values = array('title' => $request->quizetitle,
@@ -415,10 +510,30 @@ function savecoursemedia(Request $request)
             'min_pass_score'   => $request->min_pass_score,
             'show_question' => $request->show_question,
             'random_question'   => $request->random_question,
+<<<<<<< HEAD
             'is_mentor' => 1
         );
 
         $last_session_id = DB::table('quizzes')->insertGetId($values);
+=======
+            'is_mentor' => 1,
+            'created_by' => $userId
+        );
+
+        $last_session_id = DB::table('quizzes')->insertGetId($values);
+        if($last_session_id)
+        {
+         $valueslec = array(
+             'current_step' => 'quiz',
+             'last_step_id' => $last_session_id,
+             'updated_by' => $userId
+         );
+         
+         $affectedRows = DB::table('courses')
+                         ->where('id', $request->last_course_id) // Assuming you have a session ID to identify the record
+                         ->update($valueslec);
+        }
+>>>>>>> main
         return $last_session_id;
 
         }
@@ -457,6 +572,10 @@ function savecoursemedia(Request $request)
 
      function saveassignment(Request $request)
      {
+<<<<<<< HEAD
+=======
+        $userId = Auth::id();
+>>>>>>> main
        
        
                 
@@ -511,6 +630,21 @@ function savecoursemedia(Request $request)
 
  try {
     $last_session_id =DB::table('assignment')->insertGetId($values);
+<<<<<<< HEAD
+=======
+    if($last_session_id)
+    {
+     $valueslec = array(
+         'current_step' => 'assignment',
+         'last_step_id' => $last_session_id,
+         'updated_by' => $userId
+     );
+     
+     $affectedRows = DB::table('courses')
+                     ->where('id', $request->last_course_id) // Assuming you have a session ID to identify the record
+                     ->update($valueslec);
+    }
+>>>>>>> main
     Log::info('Assignment saved successfully with ID: ' . $last_session_id);
 
     // Return a JSON response indicating success

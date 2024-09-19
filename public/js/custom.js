@@ -823,7 +823,11 @@ $(document).ready(function() {
 $(document).ready(function() {
 	function updateContent() {
 		if ($('#htmlFirst-outlined').is(':checked')) {
+<<<<<<< HEAD
 			$('#mediaContent').html('<div class="row mx-0 mt-4"><div class="col-12 mb-3 mediaUpload-border py-5"><input class="custom-inner-style form-control" type="file" name="videoAttachmentmedia" id="videoAttachmentmedia" style="display: none;"><label for="videoAttachmentmedia" class="btn MediaBtn" style="cursor: pointer;">Upload Video</label><p style="font-size: 16px; color:grey; margin-bottom:0px">File Format: .mp4</p></div><h3 class="text-start fs-subtitle">Course Thumbnail</h3><div class="col-12 mb-3 mediaUpload-border"><img style="width: 100px;" src="http://192.81.219.28/img/admin/icon_picture.png"></div><div class="col-12"><input class="custom-inner-style form-control" type="file" name="videopostermedia" id="videopostermedia" style="display: none;"><label for="videopostermedia" class="btn MediaBtn" style="cursor: pointer;">Upload Poster Image</label><p style="font-size: 16px; color:grey; margin-bottom:0px">Size: 590x300 pixels. Supports: jpg, jpeg, or png</p></div></div>');
+=======
+			$('#mediaContent').html('<div class="row mx-0 mt-4"><div class="col-12 mb-3 mediaUpload-border"><input class="custom-inner-style form-control" type="file" name="videoAttachmentmedia" id="videoAttachmentmedia"><p style="font-size: 16px; color:grey; margin-bottom:0px">File Format: .mp4</p></div><h3 class="text-start fs-subtitle">Course Thumbnail</h3><div class="col-12 mb-3 mediaUpload-border"><img style="width: 100px;" src="http://192.81.219.28/img/admin/icon_picture.png"></div><div class="col-12"><input class="custom-inner-style form-control" type="file" name="videopostermedia" id="videopostermedia"><p style="font-size: 16px; color:grey ; margin-bottom:0px">Size: 590x300 pixels. Supports: jpg,jpeg, or png</p></div></div>');
+>>>>>>> main
 		} else if ($('#urlFirst-outlined').is(':checked')) {
 			$('#mediaContent').html('<div class="row mx-0 mt-4"><div class="col"><h3 class="fs-subtitle">External URL*</h3><input type="text" class="multiField form-control mb-5" placeholder="External URL" name="externalurl" id="externalurl"><h3 class="fs-subtitle">Video Runtime - hh:mm:ss**</h3><input type="time" class="form-control multiField" value="10:05 AM" /></div></div>');
 		} else if ($('#youtubeFirst-outlined').is(':checked')) {
@@ -834,7 +838,13 @@ $(document).ready(function() {
 			$('#mediaContent').html('<div class="row mx-0 mt-4"><div class="col"><h3 class="fs-subtitle">Embedded Code*</h3><input type="text" name="embeddedurl" id="embeddedurl" class="multiField form-control mb-5" placeholder="Place your embedded code here" name="embedded" id="embedded"><h3 class="fs-subtitle">Video Runtime - hh:mm:ss**</h3><input type="time" class="form-control multiField" id="embeddedDuration" name="embeddedDuration" value="10:05 AM" /></div></div>');
 		}
 
+<<<<<<< HEAD
         
+=======
+        document.getElementById('customFileUploadButton').addEventListener('click', function() {
+            document.getElementById('videoAttachment').click();
+        });
+>>>>>>> main
 
         document.getElementById('videoAttachment').addEventListener('change', function(event) {
             const file = event.target.files[0];
@@ -847,7 +857,13 @@ $(document).ready(function() {
             $('#image').click();
         });
 
+<<<<<<< HEAD
         
+=======
+        $('#image').on('change', function() {
+            
+        });
+>>>>>>> main
     }
 	
     // Initial content update
