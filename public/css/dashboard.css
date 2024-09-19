@@ -399,16 +399,12 @@ color: #03cadf; text-shadow: 0 0 5px #1ce5df; border-left: 5px solid #2ccbdd;}
     padding: 16px 15px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    width: 200px;
 }
 
 .special_dropdown .dropdown-item a:hover, .special_dropdown .dropdown-item:hover, .special_dropdown .drodpown-title:hover, .special_dropdown .notification-scroll:hover {
     background-color: #0e1726;
 }
 
-.special_dropdown svg {
-    width: 30%;
-}
 .special_dropdown .drodpown-title, .special_dropdown .notification-scroll {
     padding: 2px 2px;
 }
@@ -1681,7 +1677,6 @@ border: 1px solid #1ce5df;
 .quiz-btns:hover {
     background: #1ce5df !important;
     color: black !important;
-    box-shadow: 0px 0px 8px 1px #00ffea !important;
 }
 
 .quiz-btns:active, .btn-check:checked+.quiz-btns {
@@ -1741,7 +1736,6 @@ border: 1px solid #1ce5df;
     background-color: #1ce5df;
     padding: 8px 15px;
     color: black;
-    box-shadow: 0px 0px 8px 1px #00ffea;
 }
 
 
@@ -2633,14 +2627,4 @@ table .dropdown-toggle::after{
     background: #893e4f !important;
     color: #fbfbfb !important;
     border: 1px solid #893e4f;
-}
-
-.course_detail_content_menu, .course_detail_content_column {
-    background-color: transparent;
-    background-image: linear-gradient(120deg, rgba(177, 0, 255, 0.3), rgba(140, 0, 255, 0.2));
-    padding: 25px;
-}
-
-.course_detail_content_column .quiz-btns:hover {
-    box-shadow: 0px 0px 8px 1px #00ffea !important;
 }

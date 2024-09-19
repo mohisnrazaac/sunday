@@ -46,10 +46,6 @@
         background: #1ce5df !important;
         color: black !important;
     }
-    .modal {
-    display: none;
-}
-
 
 </style>
 @section("content")
@@ -68,19 +64,7 @@
         @if(auth()->check() && auth()->user()->hasRole('Super-Admin'))
         {{-- TEACHERS TABLE (SUPER ADMIN) --}}
 
-        <div class="d-flex align-items-center" style="height: 100px">
-            <div class="col-4">
-                <h1 class="h5 homeHeading"><strong>@lang('Courses Management')</strong></h1>
-            </div>
-            <div class="col-8 text-end">
-                <a href="{{ route('department.index') }}" style="width:215px" class="btn_factory_reset btn">
-                    <i class="fa-solid fa-book me-2"></i> COURSE CATEGORY
-                </a>
-                <a href="{{ route('course.create') }}" style="width:215px" class="btn_factory_reset btn">
-                    <i class="fa-solid fa-plus me-2"></i> CREATE COURSE
-                </a>
-            </div>
-        </div>
+        <h1 class="h5 homeHeading mt-5"><strong>@lang('Course Management')</strong></h1>
         <div class="main-container">
             <span class="cyber_range_heading_bg">
                 {{ __('Courses') }} / 
@@ -457,7 +441,7 @@
             <div class="modal-content" style="background-color: #0F0C2A; color: #ffffff;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="importCourseModalLabel">Import Courses</h5>
-                    <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <!-- Category Pills -->
@@ -515,11 +499,8 @@
                     <!-- Tab Content for Categories -->
                     <div class="tab-content" id="pills-tabContent">
 
-                    <div class="select_cat">
-                        <p class="h5 homeHeading my-5">Please select a category to import course</p>
-                    </div>
                     @foreach ($departments as $index => $department)
-                        <div class="tab-pane rc_table_wrapper fade @if($index === 0) show @endif" id="pills-{{ $department->id }}" role="tabpanel" aria-labelledby="pills-{{ $department->id }}-tab">
+                        <div class="tab-pane rc_table_wrapper fade @if($index === 0) show active @endif" id="pills-{{ $department->id }}" role="tabpanel" aria-labelledby="pills-{{ $department->id }}-tab">
                             <!-- Courses Table for {{ $department->title }} Category -->
                             <table class="table table-striped table-cyber">
                                 <thead>
@@ -626,17 +607,11 @@
             // Optionally, populate the first active tab initially
            // populateTable('persistence', coursesData['persistence']);
             // Optionally, populate the first active tab initially
-        // const firstCategory = Object.keys(coursesData)[0];
-        // if (firstCategory) {
-        //     populateTable(firstCategory, coursesData[firstCategory]);
-        // }
+        const firstCategory = Object.keys(coursesData)[0];
+        if (firstCategory) {
+            populateTable(firstCategory, coursesData[firstCategory]);
+        }
             
-        });
-
-        $(document).ready(function(){
-            $(".modal-body .quiz-btns").click(function(){
-                $(".select_cat").hide();
-            });
         });
 
     </script>

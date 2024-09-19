@@ -4,30 +4,21 @@
 @section("content")
 
 <div class="  homeBorder p-4 mb-5">
-    <div class="d-flex justify-content-between">
-      <div class="col">
-          <button onclick="window.history.back();" class="quiz-btns btn mb-0">◀ Go Back</button>
-      </div>
-      <div class="col text-end">
-          {{-- <div style="margin-block: .5rem">
-              <i class="fa-solid fa-maximize iconColor"></i>
-              <i class="fa-regular fa-circle-question iconColor mx-1"></i>
-              <i class="fa-solid fa-gear iconColor"></i>
-          </div> --}}
-          <button onclick="" class="quiz-btns btn mb-0">Continue ▶</button>
-      </div>
+    <div class="d-flex justify-content-between mb-4">
+        <div class="col">
+            <h1 class="h5 homeHeading"><strong>Course Detail Page</strong></h1>
+        </div>
+        <div class="col text-end">
+            <i class="fa-solid fa-maximize iconColor"></i>
+            <i class="fa-regular fa-circle-question iconColor mx-1"></i>
+            <i class="fa-solid fa-gear iconColor"></i>
+        </div>
     </div>
 
 
 
-    <div class="row mt-3">
-      <div class="col-3 course_detail_content_menu">
-
-        <h1 class="display-5 homeHeading"><strong>Scada security</strong></h1>
-        {{-- PROGRESS BAR --}}
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-        </div>
+    <div class="row">
+        <div class="col-3 course_detail_content_menu  ">
 
 
 

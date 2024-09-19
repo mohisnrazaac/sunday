@@ -65,38 +65,27 @@
               </div>
           </div>
           <div class="col-9 course_detail_content_column">
-            <div class="container my-4">
               <h2>Content</h2>
               <p>{{$contentdetails[0]->title}}</p>
               <p>{{$contentdetails[0]->description}}</p>
-              @if($contentdetails[0]->video)
-                    <div class="row my-4" style="width: fit-content; margin: 0px auto; border: 1px solid #1CE5DF; background: black;">
-                        <video width="640" height="360" controls class="embed-responsive-item">
-                            <source src="{{ url($contentdetails[0]->video) }}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-              @endif
+              <video width="640" height="360" controls>
+                @if($contentdetails[0]->video)
+                <source src="{{ url($contentdetails[0]->video) }}" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+                @endif
 
                 @if($contentdetails[0]->fileattachment)
   
-                <div class="st_card_heading row text-end p-4 my-4" style="margin: 0px auto;"> 
-                    <div class="col-8 text-start align-content-center h5 homeHeading">
-                        Download file name
-                    </div>
-                    <div class="col-4">
-                        <a href="{{ url($contentdetails[0]->fileattachment) }}" download="{{$contentdetails[0]->fileattachment}}" class="quiz-btns btn">
-                            <i class="fa-solid fa-download"></i> Download Word Document
-                        </a>
-                    </div>
-                </div>
+                <a href="{{ url($contentdetails[0]->fileattachment) }}" download="{{$contentdetails[0]->fileattachment}}">
+    Download Word Document
+</a>
 @endif
-            @if($contentdetails[0]->videoposter)  <div class="row my-4" style="width: fit-content; margin: 0px auto; border: 1px solid #1CE5DF; background: black;"> <img class="embed-responsive-item" src="{{$contentdetails[0]->videoposter}}" allowfullscreen /></div>@endif
-            @if($contentdetails[0]->externalurl)   <div class="row my-4" style="width: fit-content; margin: 0px auto; border: 1px solid #1CE5DF; background: black;"><video width="640" height="360" controls class="embed-responsive-item"><source src="{{$contentdetails[0]->externalurl}}" type="video/mp4"></video></div>@endif
-            @if($contentdetails[0]->youtube)  <div class="row my-4" style="width: fit-content; margin: 0px auto; border: 1px solid #1CE5DF; background: black;"><video width="640" height="360" controls class="embed-responsive-item"><source src="{{$contentdetails[0]->youtube}}" type="video/mp4"></video></div>@endif
-            @if($contentdetails[0]->vimeo)   <div class="row my-4" style="width: fit-content; margin: 0px auto; border: 1px solid #1CE5DF; background: black;"><video width="640" height="360" controls class="embed-responsive-item"><source src="{{$contentdetails[0]->vimeo}}" type="video/mp4"></video></div>@endif
+            @if($contentdetails[0]->videoposter)  <p> <iframe class="embed-responsive-item" src="{{$contentdetails[0]->videoposter}}" allowfullscreen></iframe></p>@endif
+            @if($contentdetails[0]->externalurl)   <p><iframe class="embed-responsive-item" src="{{$contentdetails[0]->externalurl}}" allowfullscreen></iframe></p>@endif
+            @if($contentdetails[0]->youtube)  <p><iframe class="embed-responsive-item" src="{{$contentdetails[0]->youtube}}" allowfullscreen></iframe></p>@endif
+            @if($contentdetails[0]->vimeo)   <p><iframe class="embed-responsive-item" src="{{$contentdetails[0]->vimeo}}" allowfullscreen></iframe></p>@endif
           </div>
       </div>
-    </div>
 </div>
 @endsection
