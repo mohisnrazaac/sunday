@@ -1,0 +1,20 @@
+ALTER TABLE terms DROP FOREIGN KEY terms_course_id_foreign;
+ALTER TABLE terms ADD CONSTRAINT terms_course_id_foreign FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE session_term DROP FOREIGN KEY session_term_term_id_foreign;
+ALTER TABLE session_term ADD CONSTRAINT session_term_term_id_foreign FOREIGN KEY (term_id) REFERENCES terms(id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE session_term DROP FOREIGN KEY session_term_term_id_foreign;
+ALTER TABLE session_term 
+ADD CONSTRAINT session_term_term_id_foreign 
+FOREIGN KEY (term_id) 
+REFERENCES terms(id) 
+ON DELETE CASCADE 
+ON UPDATE CASCADE;
+ALTER TABLE term_user DROP FOREIGN KEY term_user_term_id_foreign;
+ALTER TABLE term_user ADD CONSTRAINT term_user_term_id_foreign FOREIGN KEY (term_id) REFERENCES terms(id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE term_user DROP FOREIGN KEY term_user_term_id_foreign;
+ALTER TABLE term_user 
+ADD CONSTRAINT term_user_term_id_foreign 
+FOREIGN KEY (term_id) 
+REFERENCES terms(id) 
+ON DELETE CASCADE 
+ON UPDATE CASCADE;
