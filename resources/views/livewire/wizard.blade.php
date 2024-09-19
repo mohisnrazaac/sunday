@@ -26,7 +26,7 @@
                             <div class="bar"></div>
                             <div class="bar"></div>
                             <div class="bar"></div>
-                            <!-- <div class="bar"></div> -->
+                            <div class="bar"></div>
                         </div>
                     </div>
                 </div>
@@ -656,7 +656,7 @@ function submitcourse()
         console.log('Appended videoAttachment:', videoAttachmentmedia.files[0]);
     }
 
-    var imagemedia = document.getElementById('imagemedia');
+    var imagemedia = document.getElementById('videopostermedia');
     if (imagemedia && imagemedia.files.length > 0) {
         formData.append('videoposter', imagemedia.files[0]);
         console.log('Appended videoposter:', imagemedia.files[0]);

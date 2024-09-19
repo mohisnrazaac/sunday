@@ -61,9 +61,9 @@
             <input type="radio" class="btn-check course-input-btn" name="question-outlined" id="course-reviews" autocomplete="off">
             <label class="btn course-nav-btn" for="course-reviews">Reviews</label>
 
-            <!-- <a href="{{ route('courses.detail') }}">
+            <a href="{{ route('courses.detail') }}">
                 <button type="button" class="cirr-btn" data-toggle="modal" data-target="#sectionModal" style="float: right;">Start Course</button>
-            </a> -->
+            </a>
             
             <div id="courseDetailSection" class="row mt-3 course-outer-card">
                 
@@ -84,6 +84,10 @@
 
     </div>
 </div>
+
+
+
+
 
 <!-- Bootstrap Modal -->
 <div class="modal fade" id="editCourseTitle" tabindex="-1" aria-labelledby="editCourseTitleLabel" aria-hidden="true" role="dialog">
@@ -192,9 +196,15 @@
 </div>
  <!-- ACCORDIAN MODAL WINDOW -->
 
+
+
+
+
+
+ 
+
 @endsection
 <script src="{{ URL::to('vendor/jquery/jquery.min.js') }}"></script>
-
 <script>
     $(document).ready(function() {
     function updateContent() {
@@ -253,7 +263,7 @@
 				<div class="card cursor-pointer">
 					<div class="card-body text-start row">
 						<div class="col-6">
-							<i class="fa-regular fa-circle-play color-cyan-2"></i> <span class="color-cyan-2 fw-light">Lecture
+							<i class="fa-regular fa-circle-play color-cyan-2"></i> <span class="color-cyan-2">Lecture
 								Title</span>
 						</div>
 						<div class="col-3 text-center text-secondary">
@@ -267,7 +277,7 @@
 				<div class="card cursor-pointer">
 					<div class="card-body text-start row">
 						<div class="col-6">
-							<i class="fa-solid fa-file-lines text-secondary"></i> <span class="text-secondary fw-light">A Note On Asking For Help</span>
+							<i class="fa-solid fa-file-lines text-secondary fw-light"></i> <span class="text-secondary">A Note On Asking For Help</span>
 						</div>
 						<div class="col-3 text-center text-secondary">
 							Preview
@@ -280,7 +290,7 @@
 				<div class="card cursor-pointer">
 					<div class="card-body text-start row">
 						<div class="col-6">
-							<i class="fa-solid fa-file-lines text-secondary"></i> <span class="text-secondary fw-light">Introducing Our TA</span>
+							<i class="fa-solid fa-file-lines text-secondary fw-light"></i> <span class="text-secondary">Introducing Our TA</span>
 						</div>
 						<div class="col-3 text-center text-secondary">
 							Preview
@@ -293,7 +303,7 @@
 				<div class="card cursor-pointer">
 					<div class="card-body text-start row">
 						<div class="col-6">
-							<i class="fa-solid fa-file-lines text-secondary"></i> <span class="text-secondary fw-light">Join The Online Community</span>
+							<i class="fa-solid fa-file-lines text-secondary fw-light"></i> <span class="text-secondary">Join The Online Community</span>
 						</div>
 						<div class="col-3 text-center text-secondary">
 							Preview
@@ -325,7 +335,6 @@
 
     // Update content on radio button change
     $('input[name="question-outlined"]').on('change', updateContent);
-    
 });
 
 

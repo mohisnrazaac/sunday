@@ -551,18 +551,18 @@ $(document).ready(function() {
 //   radio button content change for lecture video modal window
 $(document).ready(function() {
     function updateContent() {
-      if ($('#html-outlined').is(':checked')) {
-        $('#radioContent').html('<div class="row mx-0 my-5"><div class="col-6 mb-3"><h6>Video Upload</h6><input class="custom-inner-style form-control" type="file" name="videoAttachment" id="videoAttachment"><p style="font-size: 12px;">File Format: .mp4</p></div><div class="col-6 mb-3"><h6>Video Poster Upload</h6><input class="custom-inner-style form-control" type="file" name="videoposter" id="videoposter"><p style="font-size: 12px;">Size: 590x300 pixels. Supports: jpg,jpeg, or png</p></div></div>');
-      } else if ($('#url-outlined').is(':checked')) {
-        $('#radioContent').html('<div class="row mx-0 my-5"><div class="col"><h6>External URL*</h6><input type="text" id="externalurllec" class="form-control custom-inner-style mb-5" placeholder="External URL" name="externalurllec"><h6>Video Runtime - hh:mm:ss**</h6><input type="time" class="form-control custom-inner-style" id="externalurlTime" name="externalurlTime" value="10:05 AM" /></div></div>');
-      } else if ($('#youtube-outlined').is(':checked')) {
-        $('#radioContent').html('<div class="row mx-0 my-5"><div class="col"><h6>Youtube URL*</h6><input type="text" class="form-control custom-inner-style mb-5" placeholder="Youtube Video URL" name="youtubeurllec" id="youtubeurllec"><h6>Video Runtime - hh:mm:ss**</h6><input type="time" class="form-control custom-inner-style" id="youtubeurlTime" name="youtubeurlTime" value="10:05 AM" /></div></div>');
-      } else if ($('#vimeo-outlined').is(':checked')) {
-        $('#radioContent').html('<div class="row mx-0 my-5"><div class="col"><h6>Vimeo URL*</h6><input type="text" class="form-control custom-inner-style mb-5" placeholder="Vimeo Video URL" name="vimeourllec" id="vimeourllec"><h6>Video Runtime - hh:mm:ss**</h6><input type="time" class="form-control custom-inner-style" value="10:05 AM" id="vimeourlTime" name="vimeourlTime" /></div></div>');
-      } else if ($('#embeded-outlined').is(':checked')) {
-        $('#radioContent').html('<div class="row mx-0 my-5"><div class="col"><h6>Embedded Code*</h6><input type="text" class="form-control custom-inner-style mb-5" placeholder="Place your embedded code here" name="embeddedurllec" id="embeddedurllec"><h6>Video Runtime - hh:mm:ss**</h6><input type="time" class="form-control custom-inner-style" value="10:05 AM" id="embeddedurlTime" name="embeddedurlTime" /></div></div>');
+        if ($('#html-outlined').is(':checked')) {
+          $('#radioContent').html('<div class="row mx-0 my-5"><div class="col-6 mb-3"><h6>Video Upload</h6><input class="custom-inner-style form-control" type="file" name="videoAttachment" id="videoAttachment"><p style="font-size: 12px;">File Format: .mp4</p></div><div class="col-6 mb-3"><h6>Video Poster Upload</h6><input class="custom-inner-style form-control" type="file" name="videoposter" id="videoposter"><p style="font-size: 12px;">Size: 590x300 pixels. Supports: jpg,jpeg, or png</p></div></div>');
+        } else if ($('#url-outlined').is(':checked')) {
+            $('#radioContent').html('<div class="row mx-0 my-5"><div class="col"><h6>External URL*</h6><input type="text" id="externalurllec" class="form-control custom-inner-style mb-5" placeholder="External URL" name="externalurllec"><h6>Video Runtime - hh:mm:ss**</h6><input type="time" class="form-control custom-inner-style" id="externalurlTime" name="externalurlTime" value="10:05 AM" /></div></div>');
+        } else if ($('#youtube-outlined').is(':checked')) {
+          $('#radioContent').html('<div class="row mx-0 my-5"><div class="col"><h6>Youtube URL*</h6><input type="text" class="form-control custom-inner-style mb-5" placeholder="Youtube Video URL" name="youtubeurllec" id="youtubeurllec"><h6>Video Runtime - hh:mm:ss**</h6><input type="time" class="form-control custom-inner-style" id="youtubeurlTime" name="youtubeurlTime" value="10:05 AM" /></div></div>');
+        } else if ($('#vimeo-outlined').is(':checked')) {
+          $('#radioContent').html('<div class="row mx-0 my-5"><div class="col"><h6>Vimeo URL*</h6><input type="text" class="form-control custom-inner-style mb-5" placeholder="Vimeo Video URL" name="vimeourllec" id="vimeourllec"><h6>Video Runtime - hh:mm:ss**</h6><input type="time" class="form-control custom-inner-style" value="10:05 AM" id="vimeourlTime" name="vimeourlTime" /></div></div>');
+        } else if ($('#embeded-outlined').is(':checked')) {
+          $('#radioContent').html('<div class="row mx-0 my-5"><div class="col"><h6>Embedded Code*</h6><input type="text" class="form-control custom-inner-style mb-5" placeholder="Place your embedded code here" name="embeddedurllec" id="embeddedurllec"><h6>Video Runtime - hh:mm:ss**</h6><input type="time" class="form-control custom-inner-style" value="10:05 AM" id="embeddedurlTime" name="embeddedurlTime" /></div></div>');
+        }
       }
-    }
 
     // Initial content update
     updateContent();
@@ -834,7 +834,9 @@ $(document).ready(function() {
 			$('#mediaContent').html('<div class="row mx-0 mt-4"><div class="col"><h3 class="fs-subtitle">Embedded Code*</h3><input type="text" name="embeddedurl" id="embeddedurl" class="multiField form-control mb-5" placeholder="Place your embedded code here" name="embedded" id="embedded"><h3 class="fs-subtitle">Video Runtime - hh:mm:ss**</h3><input type="time" class="form-control multiField" id="embeddedDuration" name="embeddedDuration" value="10:05 AM" /></div></div>');
 		}
 
-        
+        // document.getElementById('customFileUploadButton').addEventListener('click', function() {
+        //     document.getElementById('videoAttachment').click();
+        // });
 
         document.getElementById('videoAttachment').addEventListener('change', function(event) {
             const file = event.target.files[0];
@@ -846,8 +848,6 @@ $(document).ready(function() {
         $('#customFileUploadButton2').on('click', function() {
             $('#image').click();
         });
-
-        
     }
 	
     // Initial content update

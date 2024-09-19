@@ -69,14 +69,14 @@
               <h2>Content</h2>
               <p>{{$contentdetails[0]->title}}</p>
               <p>{{$contentdetails[0]->description}}</p>
-              @if($contentdetails[0]->video)
-                    <div class="row my-4" style="width: fit-content; margin: 0px auto; border: 1px solid #1CE5DF; background: black;">
-                        <video width="640" height="360" controls class="embed-responsive-item">
-                            <source src="{{ url($contentdetails[0]->video) }}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-              @endif
+                @if($contentdetails[0]->video)
+                <div class="row my-4" style="width: fit-content; margin: 0px auto; border: 1px solid #1CE5DF; background: black;">
+                    <video width="640" height="360" controls class="embed-responsive-item">
+                        <source src="{{ url($contentdetails[0]->video) }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                @endif
 
                 @if($contentdetails[0]->fileattachment)
   
@@ -95,7 +95,7 @@
             @if($contentdetails[0]->externalurl)   <div class="row my-4" style="width: fit-content; margin: 0px auto; border: 1px solid #1CE5DF; background: black;"><video width="640" height="360" controls class="embed-responsive-item"><source src="{{$contentdetails[0]->externalurl}}" type="video/mp4"></video></div>@endif
             @if($contentdetails[0]->youtube)  <div class="row my-4" style="width: fit-content; margin: 0px auto; border: 1px solid #1CE5DF; background: black;"><video width="640" height="360" controls class="embed-responsive-item"><source src="{{$contentdetails[0]->youtube}}" type="video/mp4"></video></div>@endif
             @if($contentdetails[0]->vimeo)   <div class="row my-4" style="width: fit-content; margin: 0px auto; border: 1px solid #1CE5DF; background: black;"><video width="640" height="360" controls class="embed-responsive-item"><source src="{{$contentdetails[0]->vimeo}}" type="video/mp4"></video></div>@endif
-          </div>
+            </div>
       </div>
     </div>
 </div>
