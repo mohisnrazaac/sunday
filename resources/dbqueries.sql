@@ -27,7 +27,7 @@ ALTER TABLE `departments` CHANGE `id` `id` BIGINT UNSIGNED NOT NULL AUTO_INCREME
 ALTER TABLE `terms` CHANGE `image` `fileattachment` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL;
 
 
-<!-- on 12 September -->
+<!-- After 12 September -->
 
 ALTER TABLE `coursemediafile` CHANGE `id` `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT, add PRIMARY KEY (`id`);
 =======

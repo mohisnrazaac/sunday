@@ -26,7 +26,11 @@
                             <div class="bar"></div>
                             <div class="bar"></div>
                             <div class="bar"></div>
+<<<<<<< HEAD
+                            <!-- <div class="bar"></div> -->
+=======
                             <div class="bar"></div>
+>>>>>>> main
                         </div>
                     </div>
                 </div>
@@ -728,7 +732,11 @@ function submitcourse()
         console.log('Appended videoAttachment:', videoAttachmentmedia.files[0]);
     }
 
+<<<<<<< HEAD
+    var imagemedia = document.getElementById('imagemedia');
+=======
     var imagemedia = document.getElementById('videopostermedia');
+>>>>>>> main
     if (imagemedia && imagemedia.files.length > 0) {
         formData.append('videoposter', imagemedia.files[0]);
         console.log('Appended videoposter:', imagemedia.files[0]);

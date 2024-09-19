@@ -49,7 +49,7 @@
 <<<<<<< HEAD
     .modal {
     display: none;
-    }
+}
 
 =======
 >>>>>>> main
@@ -464,7 +464,11 @@
             <div class="modal-content" style="background-color: #0F0C2A; color: #ffffff;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="importCourseModalLabel">Import Courses</h5>
+<<<<<<< HEAD
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+=======
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+>>>>>>> main
                 </div>
                 <div class="modal-body">
                     <!-- Category Pills -->
@@ -527,7 +531,11 @@
                         <p class="h5 homeHeading my-5">Please select a category to import course</p>
                     </div>
                     @foreach ($departments as $index => $department)
+                        <div class="tab-pane rc_table_wrapper fade @if($index === 0) show @endif" id="pills-{{ $department->id }}" role="tabpanel" aria-labelledby="pills-{{ $department->id }}-tab">
+=======
+                    @foreach ($departments as $index => $department)
                         <div class="tab-pane rc_table_wrapper fade @if($index === 0) show active @endif" id="pills-{{ $department->id }}" role="tabpanel" aria-labelledby="pills-{{ $department->id }}-tab">
+>>>>>>> main
                             <!-- Courses Table for {{ $department->title }} Category -->
                             <table class="table table-striped table-cyber">
                                 <thead>
@@ -648,5 +656,13 @@
             });
         });
 
+=======
+        const firstCategory = Object.keys(coursesData)[0];
+        if (firstCategory) {
+            populateTable(firstCategory, coursesData[firstCategory]);
+        }
+            
+        });
 
+>>>>>>> main
     </script>
